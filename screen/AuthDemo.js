@@ -58,10 +58,6 @@ export default class AuthDemo extends Component {
                 <Stack.Screen name="Signup" options={{ headerShown: false, }}>
                     {props => <SignUpScreen {...props} apiURI={this.props.apiURI}></SignUpScreen>}
                 </Stack.Screen>
-
-                <Stack.Screen name="SignupCompleted" options={{ headerShown: false, }}>
-                    {props => <SignUpCompleted {...props}></SignUpCompleted>}
-                </Stack.Screen>
             </>
         );
 

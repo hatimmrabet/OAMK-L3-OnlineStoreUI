@@ -4,16 +4,16 @@ import axios from 'axios';
 
 const SignUpScreen = (props) => {
 
-    const [username, setUsername] = useState("tester");
-    const [password, setPassword] = useState("12345");
-    const [firstName, setFirstName] = useState("Foo");
-    const [lastName, setLastName] = useState("Bar");
-    const [dateOfBirth, setDateOfBirth] = useState("2000-06-30");
-    const [email, setEmail] = useState("test@test.com");
-    const [gender, setGender] = useState("male");
-    const [phoneNumber, setPhoneNumber] = useState("+33618256737");
-    const [city, setCity] = useState("Oulu");
-    const [contryCode, setContryCode] = useState("FI");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [dateOfBirth, setDateOfBirth] = useState("");
+    const [email, setEmail] = useState("");
+    const [gender, setGender] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [city, setCity] = useState("");
+    const [contryCode, setContryCode] = useState("");
 
     function signupPressed() {
         let body = {
@@ -36,10 +36,11 @@ const SignUpScreen = (props) => {
         })
             .then(response => {
                 //handle success
-                console.log("user added =>" + response.data)
+                console.log("user added =>" + response.data);
+                alert("User successfully added");
                 props.navigation.reset({
                     index: 0,
-                    routes: [{ name: 'SignupCompleted' }],
+                    routes: [{ name: 'Login' }],
                 })
             })
             .catch(error => {

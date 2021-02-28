@@ -3,13 +3,13 @@ import { Text, View, TextInput, TouchableHighlight, Button, StyleSheet, ScrollVi
 
 const Todos = (props) => {
 
-    const [itemTitle, setItemTitle] = useState("testtt");
-    const [itemDescription, setItemDescription] = useState("fsdgg");
-    const [itemCategory, setItemCategory] = useState("tests");
-    const [itemCity, setItemCity] = useState("Oulu");
-    const [itemContryCode, setItemContryCode] = useState("FI");
-    const [itemPrice, setItemPrice] = useState("15.99");
-    const [itemDelivery, setItemDelivery] = useState("Pickup");
+    const [itemTitle, setItemTitle] = useState("");
+    const [itemDescription, setItemDescription] = useState("");
+    const [itemCategory, setItemCategory] = useState("");
+    const [itemCity, setItemCity] = useState("");
+    const [itemContryCode, setItemContryCode] = useState("");
+    const [itemPrice, setItemPrice] = useState("");
+    const [itemDelivery, setItemDelivery] = useState("");
 
 
     return (
