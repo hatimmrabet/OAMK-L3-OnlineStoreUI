@@ -34,25 +34,25 @@ const SignUpScreen = (props) => {
             data: body,
             headers: { "Content-type": "application/json" }
         })
-            .then(response => {
-                //handle success
-                console.log("user added =>" + response.data);
-                alert("User successfully added");
-                props.navigation.reset({
-                    index: 0,
-                    routes: [{ name: 'Login' }],
-                })
+        .then(response => {
+            //handle success
+            console.log("user added =>" + response.data);
+            alert("User successfully added");
+            props.navigation.reset({
+                index: 0,
+                routes: [{ name: 'Login' }],
             })
-            .catch(error => {
-                //handle error
-                console.log(error.response.data);
-                if (error.response.request.status == 409) {
-                    alert("username exist already");
-                }
-                else if ((error.response.request.status == 400)) {
-                    alert("Bad Request, Missing data or contains invalid data type in a field: \n" + error.response.data);
-                }
-            });
+        })
+        .catch(error => {
+            //handle error
+            console.log(error.response.data);
+            if (error.response.request.status == 409) {
+                alert("username exist already");
+            }
+            else if ((error.response.request.status == 400)) {
+                alert("Bad Request, Missing data or contains invalid data type in a field: \n" + error.response.data);
+            }
+        });
     }
 
     return (
