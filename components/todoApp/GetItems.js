@@ -7,7 +7,8 @@ const GetItems = (props) => {
 
     return (
         <View style={styles.container}>
-            <FlatList showsVerticalScrollIndicator={false}
+            {   props.items.length == 0 ?
+            (<FlatList showsVerticalScrollIndicator={false}
                 data={props.items}
                 renderItem={({ item }) => (
                     <View style={styles.item}>
@@ -52,7 +53,10 @@ const GetItems = (props) => {
                         </View>
                     </View>
                 )}
-            />
+            />)
+            : 
+            (<Text>You don't have any item</Text>)
+        }
         </View>
     )
 }

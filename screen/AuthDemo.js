@@ -4,7 +4,6 @@ import LoginScreen from '../components/LoginScreen'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import SignUpScreen from '../components/SignUpScreen'
-import SignUpCompleted from '../components/SignUpCompleted'
 import * as SecureStore from 'expo-secure-store'
 import LoadingScreen from '../components/LoadingScreen'
 import TodoApp from '../components/MainApp'
